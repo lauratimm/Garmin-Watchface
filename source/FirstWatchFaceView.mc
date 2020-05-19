@@ -31,6 +31,7 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
 	    setBatteryDisplay();
 	    setStepCountDisplay();
 	    setHeartrateDisplay();
+	    setCalorieDisplay();
 	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -102,5 +103,11 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
 
 	return currentHeartrate.format("%d");
     }    
+    
+    private function setCalorieDisplay() {
+    	var calories = 	Mon.getInfo().calories.toString();	
+		var kcalCalorieDisplay = View.findDrawableById("CalorieDisplay");      
+		kcalCalorieDisplay.setText(calories);	
+    }
 
 }

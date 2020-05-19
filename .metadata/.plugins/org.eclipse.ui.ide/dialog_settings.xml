@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\timm\OneDrive\Desktop\I Hate Clutter so Here&apos;s a Folder\Garmin Connect\connectiq-sdk-win-3.1.8-2020-05-01-05516d846\samples\AnimationWatchFace"/>
+	</list>
+	<section name="NewWizardAction">
+		<item value="connectiq.wizard.new.custom" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="connectiq.category.wizards"/>
+		</list>
+	</section>
+</section>

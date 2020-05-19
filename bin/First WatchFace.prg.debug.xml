@@ -15,18 +15,21 @@
 <entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="28" pc="268435601" symbol="onUpdate"/>
 <entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="29" pc="268435605" symbol="onUpdate"/>
 <entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="30" pc="268435617" symbol="onUpdate"/>
-<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="33" pc="268435629" symbol="onUpdate"/>
-<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="12" lineNum="39" pc="268435650" symbol="onHide"/>
-<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="13" lineNum="43" pc="268435655" symbol="onExitSleep"/>
-<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="14" lineNum="47" pc="268435660" symbol="onEnterSleep"/>
-<entry filename="Rez" id="22" lineNum="15" pc="268435954" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="17" pc="268435966" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="18" pc="268436129" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="19" pc="268436282" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="20" pc="268436435" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="21" pc="268436581" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="22" pc="268436714" symbol="WatchFace"/>
-<entry filename="Rez" id="22" lineNum="24" pc="268436860" symbol="WatchFace"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="31" pc="268435629" symbol="onUpdate"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="32" pc="268435641" symbol="onUpdate"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="33" pc="268435653" symbol="onUpdate"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="11" lineNum="36" pc="268435665" symbol="onUpdate"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="12" lineNum="42" pc="268435686" symbol="onHide"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="13" lineNum="46" pc="268435691" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\timm\\OneDrive\\Desktop\\Eclipse workspace\\source\\FirstWatchFaceView.mc" id="14" lineNum="50" pc="268435696" symbol="onEnterSleep"/>
+<entry filename="Rez" id="26" lineNum="15" pc="268436329" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="17" pc="268436341" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="18" pc="268436504" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="19" pc="268436657" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="20" pc="268436810" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="21" pc="268436956" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="22" pc="268437089" symbol="WatchFace"/>
+<entry filename="Rez" id="26" lineNum="24" pc="268437235" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388644" module="true" symbol="System"/>
@@ -40,10 +43,14 @@
 <entry id="8388639" module="true" symbol="Graphics"/>
 <entry id="8388769" module="true" object="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
+<entry id="18" method="true" symbol="&lt;globals/FirstWatchFaceView/&lt;&gt;setStepCountDisplay&gt;"/>
+<entry id="20" method="true" symbol="&lt;globals/FirstWatchFaceView/&lt;&gt;retrieveHeartrateText&gt;"/>
+<entry field="true" id="8389714" symbol="INVALID_HR_SAMPLE"/>
 <entry id="16" method="true" symbol="&lt;globals/FirstWatchFaceView/&lt;&gt;setMonthDayDisplay&gt;"/>
 <entry id="8388702" method="true" symbol="initialize"/>
 <entry field="true" id="14" symbol="AppName"/>
 <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry id="19" method="true" symbol="&lt;globals/FirstWatchFaceView/&lt;&gt;setHeartrateDisplay&gt;"/>
 <entry id="10" object="true" symbol="FirstWatchFaceView"/>
 <entry field="true" id="13" symbol="LauncherIcon"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
@@ -56,6 +63,7 @@
 <entry id="9" object="true" symbol="FirstWatchFaceApp"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry id="8389348" symbol="font"/>
+<entry id="17" method="true" symbol="&lt;globals/FirstWatchFaceView/&lt;&gt;setBatteryDisplay&gt;"/>
 <entry id="8389347" symbol="color"/>
 <entry id="11" module="true" symbol="Layouts"/>
 <entry id="8389125" method="true" symbol="onHide"/>
@@ -71,21 +79,29 @@
 <entry endPc="268435484" name="state" stackId="1" startPc="268435479"/>
 <entry endPc="268435489" name="state" stackId="1" startPc="268435484"/>
 <entry endPc="268435596" name="dc" stackId="1" startPc="268435554"/>
-<entry endPc="268435650" name="dc" stackId="1" startPc="268435601"/>
-<entry endPc="268435798" name="view" stackId="3" startPc="268435669"/>
-<entry endPc="268435798" name="timeString" stackId="2" startPc="268435669"/>
-<entry endPc="268435798" name="clockTime" stackId="1" startPc="268435669"/>
-<entry endPc="268435953" name="date" stackId="2" startPc="268435803"/>
-<entry endPc="268435953" name="now" stackId="1" startPc="268435803"/>
-<entry endPc="268435953" name="dateDisplay" stackId="4" startPc="268435803"/>
-<entry endPc="268435953" name="dateString" stackId="3" startPc="268435803"/>
-<entry endPc="268436927" name="rez_cmp_local_text_MonthDayDisplay" stackId="6" startPc="268435966"/>
-<entry endPc="268436927" name="rez_cmp_local_text_HeartrateDisplay" stackId="4" startPc="268435966"/>
-<entry endPc="268436927" name="rez_cmp_local_text_BatteryDisplay" stackId="3" startPc="268435966"/>
-<entry endPc="268436927" name="rez_cmp_local_text_StepCountDisplay" stackId="5" startPc="268435966"/>
-<entry endPc="268436927" name="rez_cmp_local_text_CalorieDisplay" stackId="7" startPc="268435966"/>
-<entry endPc="268436927" name="rez_cmp_local_text_TimeDisplay" stackId="2" startPc="268435966"/>
-<entry endPc="268436928" name="dc" stackId="1" startPc="268435954"/>
+<entry endPc="268435686" name="dc" stackId="1" startPc="268435601"/>
+<entry endPc="268435834" name="view" stackId="3" startPc="268435705"/>
+<entry endPc="268435834" name="timeString" stackId="2" startPc="268435705"/>
+<entry endPc="268435834" name="clockTime" stackId="1" startPc="268435705"/>
+<entry endPc="268435989" name="date" stackId="2" startPc="268435839"/>
+<entry endPc="268435989" name="now" stackId="1" startPc="268435839"/>
+<entry endPc="268435989" name="dateDisplay" stackId="4" startPc="268435839"/>
+<entry endPc="268435989" name="dateString" stackId="3" startPc="268435839"/>
+<entry endPc="268436075" name="battery" stackId="1" startPc="268435994"/>
+<entry endPc="268436075" name="batteryDisplay" stackId="2" startPc="268435994"/>
+<entry endPc="268436150" name="stepCountDisplay" stackId="2" startPc="268436080"/>
+<entry endPc="268436150" name="stepCount" stackId="1" startPc="268436080"/>
+<entry endPc="268436238" name="heartRate" stackId="1" startPc="268436155"/>
+<entry endPc="268436238" name="heartrateDisplay" stackId="2" startPc="268436155"/>
+<entry endPc="268436328" name="heartrateIterator" stackId="1" startPc="268436243"/>
+<entry endPc="268436328" name="currentHeartrate" stackId="2" startPc="268436243"/>
+<entry endPc="268437302" name="rez_cmp_local_text_MonthDayDisplay" stackId="6" startPc="268436341"/>
+<entry endPc="268437302" name="rez_cmp_local_text_HeartrateDisplay" stackId="4" startPc="268436341"/>
+<entry endPc="268437302" name="rez_cmp_local_text_BatteryDisplay" stackId="3" startPc="268436341"/>
+<entry endPc="268437302" name="rez_cmp_local_text_StepCountDisplay" stackId="5" startPc="268436341"/>
+<entry endPc="268437302" name="rez_cmp_local_text_CalorieDisplay" stackId="7" startPc="268436341"/>
+<entry endPc="268437302" name="rez_cmp_local_text_TimeDisplay" stackId="2" startPc="268436341"/>
+<entry endPc="268437303" name="dc" stackId="1" startPc="268436329"/>
 </localVars>
 <annotations/>
 <dataEntryOffsetMappings>
@@ -98,7 +114,7 @@
 <dataEntry offset="369" parentId="Rez" symbolId="JsonData" type="module"/>
 <dataEntry offset="400" parentId="Rez" symbolId="Strings" type="module"/>
 <dataEntry offset="439" parentId="globals" symbolId="FirstWatchFaceView" type="class"/>
-<dataEntry offset="550" parentId="globals" symbolId="FirstWatchFaceApp" type="class"/>
+<dataEntry offset="582" parentId="globals" symbolId="FirstWatchFaceApp" type="class"/>
 </dataEntryOffsetMappings>
 <functions>
 <functionEntry accessMode="public" name="initialize" parent="FirstWatchFaceApp">
@@ -142,6 +158,18 @@
 <documentation/>
 </functionEntry>
 <functionEntry accessMode="private" name="&lt;globals/FirstWatchFaceView/&lt;&gt;setMonthDayDisplay&gt;" parent="FirstWatchFaceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" name="&lt;globals/FirstWatchFaceView/&lt;&gt;setBatteryDisplay&gt;" parent="FirstWatchFaceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" name="&lt;globals/FirstWatchFaceView/&lt;&gt;setStepCountDisplay&gt;" parent="FirstWatchFaceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" name="&lt;globals/FirstWatchFaceView/&lt;&gt;setHeartrateDisplay&gt;" parent="FirstWatchFaceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" name="&lt;globals/FirstWatchFaceView/&lt;&gt;retrieveHeartrateText&gt;" parent="FirstWatchFaceView">
 <documentation/>
 </functionEntry>
 <functionEntry accessMode="public" name="WatchFace" parent="Layouts">

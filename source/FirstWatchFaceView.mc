@@ -28,6 +28,9 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
     function onUpdate(dc) {
 	    setClockDisplay();
 	    setMonthDayDisplay();
+	    setBatteryDisplay();
+	    setStepCountDisplay();
+	    setHeartrateDisplay();
 	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -62,7 +65,42 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
 		dateDisplay.setText(dateString);	    	
     }
     
-       
+    private function setBatteryDisplay() {
+    	var battery = System.getSystemStats().battery;				
+		var batteryDisplay = View.findDrawableById("BatteryDisplay");      
+		batteryDisplay.setText(battery.format("%d")+"%");
+		
+    }
     
+    private function setStepCountDisplay() {
+    	var stepCount = Mon.getInfo().steps.toString();		
+		var stepCountDisplay = View.findDrawableById("StepCountDisplay");      
+		stepCountDisplay.setText(stepCount);		
+    }
+    
+     private function setHeartrateDisplay() {
+    	var heartRate = "";
+    	
+    	if(Mon has :INVALID_HR_SAMPLE) {
+    		heartRate = retrieveHeartrateText();
+    	}
+    	else {
+    		heartRate = "";
+    	}
+    	
+	var heartrateDisplay = View.findDrawableById("HeartrateDisplay");      
+	heartrateDisplay.setText(heartRate);
+    }
+       
+    private function retrieveHeartrateText() {
+    	var heartrateIterator = ActivityMonitor.getHeartRateHistory(null, false);
+	var currentHeartrate = heartrateIterator.next().heartRate;
+
+	if(currentHeartrate == Mon.INVALID_HR_SAMPLE) {
+		return "";
+	}		
+
+	return currentHeartrate.format("%d");
+    }    
 
 }

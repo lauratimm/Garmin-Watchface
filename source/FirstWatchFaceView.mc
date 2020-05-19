@@ -3,6 +3,10 @@ using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
 
+using Toybox.Time.Gregorian as Date;
+using Toybox.Application as App;
+using Toybox.ActivityMonitor as Mon;
+
 class FirstWatchFaceView extends WatchUi.WatchFace {
 
     function initialize() {
@@ -22,12 +26,9 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-        // Get and show the current time
-        var clockTime = System.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
-        var view = View.findDrawableById("TimeLabel");
-        view.setText(timeString);
-
+	    setClockDisplay();
+	    setMonthDayDisplay();
+	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
@@ -45,5 +46,23 @@ class FirstWatchFaceView extends WatchUi.WatchFace {
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
     }
+    
+    private function setClockDisplay() {
+    	var clockTime = System.getClockTime();
+        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
+        var view = View.findDrawableById("TimeDisplay");
+        view.setText(timeString);
+    }
+    
+    private function setMonthDayDisplay() {        
+    	var now = Time.now();
+		var date = Date.info(now, Time.FORMAT_LONG);
+		var dateString = Lang.format("$1$ $2$", [date.month, date.day]);
+		var dateDisplay = View.findDrawableById("MonthDayDisplay");      
+		dateDisplay.setText(dateString);	    	
+    }
+    
+       
+    
 
 }

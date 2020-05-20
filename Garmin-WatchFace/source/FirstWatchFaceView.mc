@@ -1,5 +1,5 @@
 using Toybox.WatchUi as Ui;
-using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
 using Toybox.System;
 using Toybox.Lang;
 
@@ -9,14 +9,14 @@ using Toybox.ActivityMonitor as Mon;
 
 class FirstWatchFaceView extends Ui.WatchFace {
 
-        var HRicon;
+        var HRimage;
 		function initialize() {
 		WatchFace.initialize();
     }
 
     // Load your resources here
     function onLayout(dc) {
-    	HRicon = Ui.loadResource(Rez.Drawables.HRicon);
+    	HRimage = Ui.loadResource(Rez.Drawables.HRicon);
         setLayout(Rez.Layouts.WatchFace(dc));
     }
 
@@ -34,16 +34,50 @@ class FirstWatchFaceView extends Ui.WatchFace {
 	    setStepCountDisplay();
 	    setHeartrateDisplay();
 	    setCalorieDisplay();
-	    
-	    var setting_ShowHRicon = Application.getApp().getProperty("HRicon");
-	    
-		if( setting_ShowHRicon ) {
-			var HRicon = Ui.loadResource(Rez.Drawables.HRicon);
-			dc.drawBitmap( 100, 143, HRicon);
-		}
+	    dc.drawBitmap( 100, 143, HRimage);
 	
+		var battery = System.getSystemStats().battery;	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        // Change to percentage width
+		var batteryBar = (dc.getWidth()/150)*battery;  
+		// draw in exchange with battery status
+		if (battery<=10)
+		{ 
+				dc.setColor(Gfx.COLOR_DK_RED,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
+		else if (battery <=20)
+		{ 
+				dc.setColor(Gfx.COLOR_RED,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
+		else if (battery <=30)
+		{ 
+				dc.setColor(Gfx.COLOR_ORANGE,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
+		else if (battery <=40)
+		{ 
+				dc.setColor(Gfx.COLOR_YELLOW,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
+		else if (battery <=50)
+		{ 
+				dc.setColor(Gfx.COLOR_GREEN,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
+		else
+		{
+    			dc.setColor(Gfx.COLOR_DK_GREEN,Gfx.COLOR_WHITE);
+				dc.drawRectangle(80, 35, batteryBar,3);
+				dc.fillRectangle(80, 35, batteryBar,3);
+		}
     }
 
     // Called when this View is removed from the screen. Save the

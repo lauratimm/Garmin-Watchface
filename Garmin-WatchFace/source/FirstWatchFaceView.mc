@@ -10,13 +10,19 @@ using Toybox.ActivityMonitor as Mon;
 class FirstWatchFaceView extends Ui.WatchFace {
 
         var HRimage;
+        
 		function initialize() {
+		View.initialize();
+	        HRimage = new Ui.Bitmap({
+	            :rezId=>Rez.Drawables.HRimage,
+	            :locX=>128,
+	            :locY=>80
+	        });
 		WatchFace.initialize();
     }
 
     // Load your resources here
     function onLayout(dc) {
-    	HRimage = Ui.loadResource(Rez.Drawables.HRicon);
         setLayout(Rez.Layouts.WatchFace(dc));
     }
 
@@ -28,20 +34,21 @@ class FirstWatchFaceView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
+    	HRimage.draw(dc);
 	    setClockDisplay();
 	    setMonthDayDisplay();
 	    setBatteryDisplay();
 	    setStepCountDisplay();
 	    setHeartrateDisplay();
 	    setCalorieDisplay();
-	    dc.drawBitmap( 100, 143, HRimage);
+	    
 	
 		var battery = System.getSystemStats().battery;	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
-        // Change to percentage width
+        // Change size of bar to percentage width
 		var batteryBar = (dc.getWidth()/150)*battery;  
-		// draw in exchange with battery status
+		// color of bar changes based on the % of battery left
 		if (battery<=10)
 		{ 
 				dc.setColor(Gfx.COLOR_DK_RED,Gfx.COLOR_WHITE);

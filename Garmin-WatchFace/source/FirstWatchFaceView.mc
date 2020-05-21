@@ -35,8 +35,7 @@ class FirstWatchFaceView extends Ui.WatchFace {
     // Update the view
     function onUpdate(dc) {
     	HRimage.draw(dc);
-	    setHourDisplay();
-	    setMinDisplay();
+	    setTimeDisplay();
 	    setMonthDayDisplay();
 	    setBatteryDisplay();
 	    setStepCountDisplay();
@@ -102,17 +101,15 @@ class FirstWatchFaceView extends Ui.WatchFace {
     function onEnterSleep() {
     }
     
-    private function setHourDisplay() {
-    	var clockTime = System.getClockTime();
-        var timeString = Lang.format("$1$ ", [clockTime.hour, ("%01d")]);
-        var view = View.findDrawableById("HourDisplay");
-        view.setText(timeString);
-    }
-    private function setMinDisplay() {
-    	var clockTime = System.getClockTime();
-        var timeString = Lang.format(":$1$", [clockTime.min, ("%02d")]);
-        var view = View.findDrawableById("MinDisplay");
-        view.setText(timeString);
+    private function setTimeDisplay() {
+    	//var clockTime = System.getClockTime();
+    	var today = Date.info(Time.now(), Time.FORMAT_MEDIUM);
+        var hourString = Lang.format("$1$ ", [today.hour, ("%01d")]);
+        var minString = Lang.format("$1$ ", [today.min]);
+        var hourview = View.findDrawableById("HourDisplay");
+        var minview = View.findDrawableById("MinDisplay");
+        hourview.setText(hourString);
+        minview.setText(minString);
     }
     
     private function setMonthDayDisplay() {        

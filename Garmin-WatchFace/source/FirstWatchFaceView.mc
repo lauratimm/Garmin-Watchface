@@ -103,9 +103,15 @@ class FirstWatchFaceView extends Ui.WatchFace {
     
     private function setTimeDisplay() {
     	
-    	var today = Date.info(Time.now(), Time.CURRENT_TIME_DEFAULT);
-        var hourString = Lang.format("$1$ ", [today.hour]);
-        var minString = Lang.format(" :$1$ ", [today.min.format("%02d")]);
+    	var clktime = Date.info(Time.now(), Time.CURRENT_TIME_DEFAULT);
+    	
+    	//make into 12 hr clock
+    	var hour = clktime.hour; 
+        if (hour >= 13) { hour = hour - 12; }
+        if (hour == 0) {hour = 12;}
+    	
+        var hourString = Lang.format("$1$ ", [hour]);
+        var minString = Lang.format(" :$1$ ", [clktime.min.format("%02d")]);
         var hourview = View.findDrawableById("HourDisplay");
         var minview = View.findDrawableById("MinDisplay");
         hourview.setText(hourString);

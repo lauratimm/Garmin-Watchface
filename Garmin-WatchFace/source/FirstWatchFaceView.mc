@@ -13,11 +13,6 @@ class FirstWatchFaceView extends Ui.WatchFace {
         
 		function initialize() {
 		View.initialize();
-	        HRimage = new Ui.Bitmap({
-	            :rezId=>Rez.Drawables.HRimage,
-	            :locX=>128,
-	            :locY=>80
-	        });
 		WatchFace.initialize();
     }
 
@@ -34,14 +29,12 @@ class FirstWatchFaceView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-    	HRimage.draw(dc);
 	    setTimeDisplay();
 	    setMonthDayDisplay();
 	    setBatteryDisplay();
 	    setStepCountDisplay();
 	    setHeartrateDisplay();
 	    setCalorieDisplay();
-	    
 	
 		var battery = System.getSystemStats().battery;	
         // Call the parent onUpdate function to redraw the layout
@@ -108,7 +101,7 @@ class FirstWatchFaceView extends Ui.WatchFace {
     	//make into 12 hr clock
     	var hour = clktime.hour; 
         if (hour >= 13) { hour = hour - 12; }
-        if (hour == 0) {hour = 12;}
+        if (hour == 0) {hour = 12;} 
     	
         var hourString = Lang.format("$1$ ", [hour]);
         var minString = Lang.format(" :$1$ ", [clktime.min.format("%02d")]);

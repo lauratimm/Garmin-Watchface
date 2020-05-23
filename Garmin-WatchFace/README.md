@@ -1,5 +1,7 @@
 # Garmin-Watchface
 
+![Test Image 1]()
+
 Resources: 
 
 https://medium.com/@JoshuaTheMiller/making-a-watchface-for-garmin-devices-8c3ce28cae08

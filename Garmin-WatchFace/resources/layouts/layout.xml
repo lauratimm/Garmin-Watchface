@@ -2,11 +2,12 @@
     <label id="HourDisplay" x="150" y="center" font="Graphics.FONT_SYSTEM_NUMBER_THAI_HOT" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_WHITE" />
      <label id="MinDisplay" text=":00" x="195" y="100" font="Graphics.FONT_SYSTEM_NUMBER_MILD" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_WHITE" />
     
-    <label id="BatteryDisplay" text="00" x="center" y="38" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
-    <label id="HeartrateDisplay" text="000" x="center" y="222" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
-    <label id="StepCountDisplay" text="00000" x="70" y="169" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
+    <label id="BatteryDisplay" text="00" x="center" y="38" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
+    <label id="HeartrateDisplay" text="000" x="130" y="225" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />
+    <label id="StepCountDisplay" text="00000" x="85" y="180" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />
     <label id="MonthDayDisplay"  x="165" y="140" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />      
-    <label id="CalorieDisplay" text="0000" x="180" y="169" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
+    <label id="CalorieDisplay" text="0000" x="180" y="180" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
 
-	<bitmap x="119"     y="227"  id="id_feet"      filename="../drawables/hiclipart.com.png"></bitmap>
+	<bitmap x="105"     y="227"  id="id_heart"      filename="../drawables/hiclipart.com.png"></bitmap>
+	<bitmap x="50"    	y="180"   id="id_feet"      filename="../drawables/step_icon.png"></bitmap>
 </layout>

@@ -6,8 +6,9 @@
     <label id="HeartrateDisplay" text="000" x="130" y="225" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />
     <label id="StepCountDisplay" text="00000" x="85" y="180" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />
     <label id="MonthDayDisplay"  x="165" y="140" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />      
-    <label id="CalorieDisplay" text="0000" x="180" y="180" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
+    <label id="CalorieDisplay" text="0000" x="190" y="180" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />
 
 	<bitmap x="105"     y="227"  id="id_heart"      filename="../drawables/hiclipart.com.png"></bitmap>
 	<bitmap x="50"    	y="180"   id="id_feet"      filename="../drawables/step_icon.png"></bitmap>
+	<bitmap x="165"    	y="180"   id="id_cal"      filename="../drawables/calorie_icon.png"></bitmap>
 </layout>

@@ -100,15 +100,20 @@ class FirstWatchFaceView extends Ui.WatchFace {
     	
     	//make into 12 hr clock
     	var hour = clktime.hour; 
-        if (hour >= 13) { hour = hour - 12; }
+    	var AmPm = "";
+        if (hour >= 13) { hour = hour % 12; }
+        AmPm = clktime.hour >= 12 && clktime.hour < 24 ? "PM" : "AM";
+        System.println(AmPm);
         if (hour == 0) {hour = 12;} 
     	
         var hourString = Lang.format("$1$ ", [hour]);
         var minString = Lang.format(" :$1$ ", [clktime.min.format("%02d")]);
         var hourview = View.findDrawableById("HourDisplay");
         var minview = View.findDrawableById("MinDisplay");
+        var ampmview = View.findDrawableById("AMPMdisplay");
         hourview.setText(hourString);
         minview.setText(minString);
+        ampmview.setText(AmPm);
     }
     
     private function setMonthDayDisplay() {        

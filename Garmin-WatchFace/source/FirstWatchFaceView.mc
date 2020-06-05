@@ -36,6 +36,14 @@ class FirstWatchFaceView extends Ui.WatchFace {
 	    setHeartrateDisplay();
 	    setCalorieDisplay();
 	
+		//get the temperature
+		var temperature = App.getApp().getProperty("weather_temp");
+		temperature = 30;
+		var tempString = Lang.format("$1$°C", [temperature.format("%0.1f")]); 
+		var tempDisplay = View.findDrawableById("TemperatureDisplay"); 
+		tempDisplay.setText(tempString);
+		System.println(temperature);
+	
 		var battery = System.getSystemStats().battery;	
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -103,7 +111,6 @@ class FirstWatchFaceView extends Ui.WatchFace {
     	var AmPm = "";
         if (hour >= 13) { hour = hour % 12; }
         AmPm = clktime.hour >= 12 && clktime.hour < 24 ? "PM" : "AM";
-        System.println(AmPm);
         if (hour == 0) {hour = 12;} 
     	
         var hourString = Lang.format("$1$ ", [hour]);

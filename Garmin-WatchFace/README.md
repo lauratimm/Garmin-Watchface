@@ -1,8 +1,5 @@
 # Garmin-Watchface
 
-![Test Image 1](https://github.com/lauratimm/Garmin-Watchface/blob/master/Garmin-WatchFace/watchface.PNG)
-
-Watchface as of May23 
 
 Resources: 
 

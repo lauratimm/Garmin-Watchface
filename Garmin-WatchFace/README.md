@@ -2,7 +2,7 @@
 
 ![Test Image 1](https://github.com/lauratimm/Garmin-Watchface/blob/master/Garmin-WatchFace/watchface.PNG)
 
-Watchface as of May23 
+Watchface as of June 05 
 
 Resources: 
 
